@@ -5,13 +5,14 @@ import { useRouter } from 'next/dist/client/router'
 import {motion} from "framer-motion";
 
 const links = [
-    {
-        name: 'Home',
-        href: '/',
-    },
+
     {
         name: 'Blog',
         href: '/blog',
+    },
+    {
+        name: 'Technologies',
+        href: '/technologies',
     },
     {
         name: 'Social',

@@ -15,8 +15,8 @@ export default function blog({posts}) {
         <>
             <Header/>
             <Layout>
-                <div>
-                    <div className='posts'>
+                <div className="h-screen">
+                    <div className='flex gap-10 flex-wrap md:justify-center md:py-20'>
                         {posts.map((post, index) => (
                             <Post key={index} post={post}/>
                         ))}

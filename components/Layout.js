@@ -17,8 +17,8 @@ const Layout = ({children}) => (
             variants={variants}
             transition={{type: 'linear'}}
             className="
-                    flex flex-col items-start w-full pt-10
-                    px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-96
+                    flex flex-col items-start md:items-center w-full pt-10
+                    px-8
                     pt-24 h-full
                 "
         >

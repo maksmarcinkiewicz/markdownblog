@@ -3,3 +3,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    @variants responsive {
+        .hide {
+            display: none;
+            visibility: hidden;
+        }
+
+        .show {
+            display: inline;
+            visibility: visible;
+        }
+    }
+}
+
+@layer components {
+    .navigation-underline {
+        @apply w-full border border-yellow-300;
+    }
+}
