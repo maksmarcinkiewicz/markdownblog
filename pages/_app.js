@@ -15,7 +15,7 @@ function MyApp({Component, pageProps}) {
             >
             <Component {...pageProps} />
             </AnimatePresence>
-            <Footer/>
+
         </>
     )
 }

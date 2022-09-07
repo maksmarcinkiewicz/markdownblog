@@ -6,17 +6,16 @@ export default function Header() {
         <>
             <header
                 className="
-        w-full fixed bg-white flex flex-row justify-between items-center
-        h-16 md:h-20 border-b border-gray-200 z-50
+        w-full fixed flex flex-row justify-between items-center
+        h-16 md:h-20 z-50
         px-8 sm:px-16 md:px-36 lg:px-52 xl:px-80 2xl:px-96
-        dark:bg-gray-800 dark:border-gray-600
-        text-black dark:text-white
+        text-black bg-white border-b-2 border-gray-800
     "
             >
                 <Link href="/">
                     <a>
-                        <span className="show sm:hide">JS</span>
-                        <span className="hide sm:show">Jakub Szymkowiak</span>
+                        <span className="show sm:hide text-xl">JS</span>
+                        <span className="hide sm:show sm:text-2xl">Jakub Szymkowiak</span>
                     </a>
                 </Link>
                 <div className="flex flex-row items-center">

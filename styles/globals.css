@@ -1,7 +1,15 @@
 @import url("https://use.typekit.net/aef7vae.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .navigation-underline {
+        @apply w-full border border-gray-800;
+    }
+}
 
 @layer utilities {
     @variants responsive {
@@ -17,8 +25,4 @@
     }
 }
 
-@layer components {
-    .navigation-underline {
-        @apply w-full border border-yellow-300;
-    }
-}
+

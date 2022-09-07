@@ -43,7 +43,9 @@ export default function Home() {
                             whileHover={{scale: 1.2}}
                             whileTap={{scale: 0.9}}
                         >
-                            <a className="font-sans">technologies</a>
+                            <Link href={`/technologies`}>
+                                <a>technologies</a>
+                            </Link>
                         </motion.button>
                     </motion.div>
                     <motion.div
@@ -54,7 +56,9 @@ export default function Home() {
                             whileHover={{scale: 1.2}}
                             whileTap={{scale: 0.9}}
                         >
-                            <a className="font-sans">social</a>
+                            <Link href={`/social`}>
+                                <a>social</a>
+                            </Link>
                         </motion.button>
                     </motion.div>
                 </div>
