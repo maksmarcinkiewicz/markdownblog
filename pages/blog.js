@@ -1,7 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import Head from 'next/head'
 import Post from '../components/Post'
 import {sortByDate} from '../utils'
 
@@ -14,15 +13,14 @@ export default function blog({posts}) {
 
         <>
             <Header/>
+
             <Layout>
-                <div className="h-screen">
-                    <h3 className="flex justify-center items-center py-8 text-2xl">Blog posts</h3>
-                    <div className='flex gap-10 flex-wrap md:justify-center md:py-20'>
+                    <div className='flex gap-5 flex-wrap md:justify-center md:py-20 mb-20'>
+                        <h3 className="font-medium text-2xl text-center">Check out my latest posts</h3>
                         {posts.map((post, index) => (
                             <Post key={index} post={post}/>
                         ))}
                     </div>
-                </div>
             </Layout></>
     )
 }

@@ -7,15 +7,15 @@ import {motion} from "framer-motion";
 const links = [
 
     {
-        name: 'Blog',
+        name: 'blog',
         href: '/blog',
     },
+    // {
+    //     name: 'technologies',
+    //     href: '/technologies',
+    // },
     {
-        name: 'Technologies',
-        href: '/technologies',
-    },
-    {
-        name: 'Social',
+        name: 'about me',
         href: '/social',
     },
 ]
@@ -27,7 +27,7 @@ export default function Navigation() {
             <nav className="flex">
                 {links.map(({ name, href }) => (
                     <Link key={name} href={href}>
-                        <a className="mr-6 sm:mr-8 flex flex-col relative sm:text-lg">
+                        <a className="mr-4 sm:mr-8 flex flex-col relative sm:text-lg">
                             {name}
                             {isActiveLink(href, router.pathname) && (
                                 <motion.div

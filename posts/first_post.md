@@ -12,11 +12,19 @@ verba caput ferarum _nubila_? Patriam Cyparisse tamen, **saxum** fide postponere
 pavida ne omnes etiam, atque. Sonuit omina sed sine haerebat illic fit a mora
 in.
 
+Lift($L$) can be determined by Lift Coefficient ($C_L$) like the following
+equation.
+
+$$
+\begin{align*}
+&\text{minimize:} \\
+&\qquad \| r \|_2 \\
+&\text{subject to:} \\
+&\qquad f(x+r) = l \\
+&\qquad x+r \in [0,1]^m
+\end{align*}
 $$
 
-2 + 2 == \frac
-
-$$
 
 
 1. Serrae enim Etruscam aquis
@@ -32,10 +40,10 @@ consequitur et quoque scinditque in. Ratis laborum instabat quaedam partem
 Phoebus, manus _partibus poenas_. Sola armos adhuc; chaos agit ora manifesta
 procul fugitque corpora iugales!
 
-    var ethics_font_drive = cycleSystemProgram + deprecatedTransferIp.ide(3) /
-            rgb + nybbleBaseband;
-    permalinkCertificateMacintosh(ergonomicsIsdnDns);
-    boot = bridgeDaemonActive;
+var ethics_font_drive = cycleSystemProgram + deprecatedTransferIp.ide(3) /
+rgb + nybbleBaseband;
+permalinkCertificateMacintosh(ergonomicsIsdnDns);
+boot = bridgeDaemonActive;
 
 ## O contra diu
 

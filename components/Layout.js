@@ -19,7 +19,7 @@ const Layout = ({children}) => (
             className="
                     flex flex-col items-start md:items-center w-full pt-10
                     px-8
-                    pt-24 h-full
+                    h-full
                 "
         >
             {children}

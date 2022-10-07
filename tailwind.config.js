@@ -10,5 +10,7 @@ module.exports = {
       'sans': ['josefin-sans']
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
