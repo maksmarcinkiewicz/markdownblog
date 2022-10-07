@@ -18,17 +18,19 @@ export default function PostPage({
         <>
             <Header/>
 
-                <div className="py-10 md:flex flex-col justify-center items-center md:py-40">
+                <div className="py-10 md:flex flex-col justify-center items-center md:py-10">
                     <Link href='/blog/' className="">
-                        <a className='px-8 underline text-lg'>Go Back</a>
+                        <a className='px-8 underline text-lg py-5'>Go Back</a>
                     </Link>
-                    <h1 className='px-8 text-3xl py-2'>{title}</h1>
-                    <div className='px-8 post-date'>Posted on {date}</div>
-                    <ReactMarkdown
-                        remarkPlugins={[remarkMath]}
-                        rehypePlugins={[rehypeKatex]}
-                        className="prose prose-sm lg:prose-lg px-8 py-8"
-                    >{content}</ReactMarkdown>
+                    <div className="md:p-6 md:bg-white md:rounded-lg md:border md:border-gray-200 md:shadow-md">
+                        <h1 className='px-8 text-3xl py-2'>{title}</h1>
+                        <div className='px-8 post-date'>Posted on {date}</div>
+                        <ReactMarkdown
+                            remarkPlugins={[remarkMath]}
+                            rehypePlugins={[rehypeKatex]}
+                            className="prose prose-sm lg:prose-lg px-8 py-8"
+                        >{content}</ReactMarkdown>
+                    </div>
                 </div>
 
 
