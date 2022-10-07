@@ -7,6 +7,7 @@ import rehypeKatex from 'rehype-katex'
 import Link from 'next/link'
 import Header from "../../components/Header";
 import 'katex/dist/katex.min.css'
+import Layout from "../../components/Layout";
 
 export default function PostPage({
                                      frontmatter: {title, date, cover_image},
@@ -16,18 +17,20 @@ export default function PostPage({
     return (
         <>
             <Header/>
-            <div className="py-10 md:flex flex-col justify-center items-center md:py-40">
-                <Link href='/blog/' className="">
-                    <a className='px-8 underline text-lg'>Go Back</a>
-                </Link>
-                <h1 className='px-8 text-3xl py-2'>{title}</h1>
-                <div className='px-8 post-date'>Posted on {date}</div>
-                <ReactMarkdown
-                    remarkPlugins={[remarkMath]}
-                    rehypePlugins={[rehypeKatex]}
-                    className="prose prose-sm lg:prose-lg px-8 py-8"
-                >{content}</ReactMarkdown>
-            </div>
+
+                <div className="py-10 md:flex flex-col justify-center items-center md:py-40">
+                    <Link href='/blog/' className="">
+                        <a className='px-8 underline text-lg'>Go Back</a>
+                    </Link>
+                    <h1 className='px-8 text-3xl py-2'>{title}</h1>
+                    <div className='px-8 post-date'>Posted on {date}</div>
+                    <ReactMarkdown
+                        remarkPlugins={[remarkMath]}
+                        rehypePlugins={[rehypeKatex]}
+                        className="prose prose-sm lg:prose-lg px-8 py-8"
+                    >{content}</ReactMarkdown>
+                </div>
+
 
         </>
     )

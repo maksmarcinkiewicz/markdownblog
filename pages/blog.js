@@ -8,6 +8,8 @@ import React from 'react'
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 
+
+
 export default function blog({posts}) {
     return (
 
@@ -15,12 +17,14 @@ export default function blog({posts}) {
             <Header/>
 
             <Layout>
+                <h3 className="md:text-4xl md:py-10 text-2xl py-5">my latest posts</h3>
                     <div className='flex gap-5 flex-wrap md:justify-center md:py-20 mb-20'>
-                        <h3 className="font-medium text-2xl text-center">Check out my latest posts</h3>
+
                         {posts.map((post, index) => (
                             <Post key={index} post={post}/>
                         ))}
                     </div>
+
             </Layout></>
     )
 }
