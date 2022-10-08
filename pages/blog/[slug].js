@@ -19,8 +19,8 @@ export default function PostPage({
             <Header/>
 
                 <div className="py-10 md:flex flex-col justify-center items-center md:py-10">
-                    <Link href='/blog/' className="">
-                        <a className='px-8 underline text-lg py-5'>Go Back</a>
+                    <Link href='/blog/'>
+                        <a className='inline-flex items-start justify-start py-2 px-3 text-sm font-medium text-center text-gray-800 border border-gray-200 border-2 rounded-lg mb-5 font-bold ml-8'>go back</a>
                     </Link>
                     <div className="md:p-6 md:bg-white md:rounded-lg md:border md:border-gray-200 md:shadow-md">
                         <h1 className='px-8 text-3xl py-2'>{title}</h1>

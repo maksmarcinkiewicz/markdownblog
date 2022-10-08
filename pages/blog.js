@@ -8,6 +8,7 @@ import React from 'react'
 import Layout from "../components/Layout";
 import Header from "../components/Header";
 
+import metaData from "../json/data.json"
 
 
 export default function blog({posts}) {
@@ -17,9 +18,8 @@ export default function blog({posts}) {
             <Header/>
 
             <Layout>
-                <h3 className="md:text-4xl md:py-10 text-2xl py-5">my latest posts</h3>
+                <h3 className="md:text-4xl md:py-10 text-2xl py-5">{metaData.blog.title}</h3>
                     <div className='flex gap-5 flex-wrap md:justify-center md:py-20 mb-20'>
-
                         {posts.map((post, index) => (
                             <Post key={index} post={post}/>
                         ))}

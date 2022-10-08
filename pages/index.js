@@ -1,5 +1,4 @@
 import {motion} from "framer-motion"
-import Link from 'next/link'
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -9,33 +8,35 @@ import React from "react";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
 
+import metaData from "../json/data.json"
+
+
 export default function Home({posts}) {
+
 
     return (
         <>
             <Header/>
-           <Layout>
-               <div className="md:flex md:items-center md:justify-center md:gap-x-20">
-                   <div className="max-w-sm pb-10">
-                       <h5 className="text-4xl font-medium md:ml-0.5">I am </h5>
-                       <h5 className="text-6xl font-medium">Norton Bright</h5>
+            <Layout>
+                <div className="md:flex md:items-center md:justify-center md:gap-x-20">
+                    <div className="max-w-sm pb-10">
+                        <h5 className="text-4xl font-medium md:ml-0.5">I am </h5>
+                        <h5 className="text-6xl font-medium">{metaData.mainPage.name}</h5>
 
-                       <p className="pt-5 text-justify text-gray-600">graduate student in both
-                           Mathematics (Statistics) and Data Analysis & Data Processing
-                       </p>
-                   </div>
+                        <p className="pt-5 text-justify text-gray-600">{metaData.mainPage.description}
+                        </p>
+                    </div>
 
-                   <motion.div
+                    <motion.div
 
-                       className='flex gap-5 flex-wrap md:justify-center md:py-5 mb-20 md:flex-col'>
-                       {/*<h3 className="font-medium text-2xl text-center">Check out my latest posts</h3>*/}
-                       {posts.slice(0,3).map((post, index) => (
-                           <PostIndex key={index} post={post}/>
-                       ))}
-                   </motion.div>
-               </div>
-           </Layout>
-
+                        className='flex gap-5 flex-wrap md:justify-center md:py-5 mb-20 md:flex-col'>
+                        {/*<h3 className="font-medium text-2xl text-center">Check out my latest posts</h3>*/}
+                        {posts.slice(0, 3).map((post, index) => (
+                            <PostIndex key={index} post={post}/>
+                        ))}
+                    </motion.div>
+                </div>
+            </Layout>
         </>
     )
 }
@@ -64,6 +65,9 @@ export async function getStaticProps() {
     return {
         props: {
             posts: posts.sort(sortByDate),
+
+
         },
     }
 }
+

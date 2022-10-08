@@ -16,7 +16,7 @@ const links = [
     // },
     {
         name: 'about me',
-        href: '/social',
+        href: '/aboutme',
     },
 ]
 
