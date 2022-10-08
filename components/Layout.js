@@ -18,7 +18,7 @@ const Layout = ({children}) => (
             transition={{type: 'linear'}}
             className="
                     flex flex-col items-start md:items-center w-full pt-10
-                    px-8
+                    px-4
                     h-full
                 "
         >

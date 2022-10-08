@@ -18,8 +18,8 @@ export default function blog({posts}) {
             <Header/>
 
             <Layout>
-                <h3 className="md:text-4xl md:py-10 text-2xl py-5">{metaData.blog.title}</h3>
-                    <div className='flex gap-5 flex-wrap md:justify-center md:py-20 mb-20'>
+                <h3 className="md:text-4xl md:py-10 text-2xl py-5 px-4">{metaData.blog.title}</h3>
+                    <div className='flex gap-5 flex-wrap md:justify-center md:py-20 mb-20 px-4'>
                         {posts.map((post, index) => (
                             <Post key={index} post={post}/>
                         ))}
@@ -31,14 +31,14 @@ export default function blog({posts}) {
 
 export async function getStaticProps() {
 
-    const files = fs.readdirSync(path.join('posts'))
+    const files = fs.readdirSync(path.join('markdown/posts'))
 
     const posts = files.map((filename) => {
 
         const slug = filename.replace('.md', '')
 
         const markdownWithMeta = fs.readFileSync(
-            path.join('posts', filename),
+            path.join('markdown/posts', filename),
             'utf-8'
         )
 

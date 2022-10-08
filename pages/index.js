@@ -18,12 +18,12 @@ export default function Home({posts}) {
         <>
             <Header/>
             <Layout>
-                <div className="md:flex md:items-center md:justify-center md:gap-x-20">
+                <div className="md:flex md:items-center md:justify-center md:gap-x-20 px-4">
                     <div className="max-w-sm pb-10">
-                        <h5 className="text-4xl font-medium md:ml-0.5">I am </h5>
-                        <h5 className="text-6xl font-medium">{metaData.mainPage.name}</h5>
+                        <h5 className="text-3xl font-medium ml-0.5">I am </h5>
+                        <h5 className="text-5xl font-medium">{metaData.mainPage.name}</h5>
 
-                        <p className="pt-5 text-justify text-gray-600">{metaData.mainPage.description}
+                        <p className="pt-5 text-justify text-gray-600 ml-0.5">{metaData.mainPage.description}
                         </p>
                     </div>
 
@@ -43,14 +43,14 @@ export default function Home({posts}) {
 
 export async function getStaticProps() {
 
-    const files = fs.readdirSync(path.join('posts'))
+    const files = fs.readdirSync(path.join('markdown/posts'))
 
     const posts = files.map((filename) => {
 
         const slug = filename.replace('.md', '')
 
         const markdownWithMeta = fs.readFileSync(
-            path.join('posts', filename),
+            path.join('markdown/posts', filename),
             'utf-8'
         )
 

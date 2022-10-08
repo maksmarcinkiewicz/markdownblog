@@ -2,12 +2,11 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
-import Link from "next/link";
-import Image from 'next/image'
 
-import mypic from "../public/avatar-e6624e0a678137566054d3ba137959ab.jpg"
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import fs from "fs";
+import path from "path";
 
 
 const markdown = `A paragraph with *emphasis* and **strong importance**.
@@ -24,9 +23,8 @@ A table:
 | - | - |
 `
 
-export default function aboutme() {
-
-
+export default function aboutme({markdownData}) {
+console.log(markdownData)
     return (
         <>
             <Header/>
@@ -36,10 +34,22 @@ export default function aboutme() {
                     rehypePlugins={[rehypeKatex]}
                     className="prose prose-sm lg:prose-lg px-8 py-8"
 
-                >{markdown}
+                >{markdownData}
                 </ReactMarkdown>
 
             </Layout>
         </>
     )
+}
+
+export async function getStaticProps() {
+
+const markdownWithmeta = fs.readFileSync(path.join('markdown/aboutme', 'aboutme.md'), 'utf-8')
+console.log(markdownWithmeta)
+
+    return {
+        props: {
+            markdownData: markdownWithmeta
+        }
+    }
 }
