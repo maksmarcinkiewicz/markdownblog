@@ -3,12 +3,12 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import {sortByDate} from "../utils";
-import PostIndex from "../components/PostIndex";
 import React from "react";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
 
 import metaData from "../json/data.json"
+import Post from "../components/Post";
 
 
 export default function Home({posts}) {
@@ -18,10 +18,10 @@ export default function Home({posts}) {
         <>
             <Header/>
             <Layout>
-                <div className="md:flex md:items-center md:justify-center md:gap-x-20 px-4">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-x-20 px-4 py-8 md:h-screen md:px-8">
                     <div className="max-w-sm pb-10">
-                        <h5 className="text-3xl font-medium ml-0.5">I am </h5>
-                        <h5 className="text-5xl font-medium">{metaData.mainPage.name}</h5>
+                        <h5 className="text-2xl font-medium ml-0.5">I am </h5>
+                        <h5 className="text-4xl font-medium">{metaData.mainPage.name}</h5>
 
                         <p className="pt-5 text-justify text-gray-600 ml-0.5">{metaData.mainPage.description}
                         </p>
@@ -29,10 +29,10 @@ export default function Home({posts}) {
 
                     <motion.div
 
-                        className='flex gap-5 flex-wrap md:justify-center md:py-5 mb-20 md:flex-col'>
+                        className='flex gap-5 flex-wrap items-center justify-center md:justify-center md:py-5 md:flex-col'>
                         {/*<h3 className="font-medium text-2xl text-center">Check out my latest posts</h3>*/}
                         {posts.slice(0, 3).map((post, index) => (
-                            <PostIndex key={index} post={post}/>
+                            <Post key={index} post={post}/>
                         ))}
                     </motion.div>
                 </div>

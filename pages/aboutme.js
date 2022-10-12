@@ -7,36 +7,26 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import fs from "fs";
 import path from "path";
+import ContactForm from "../components/ContactForm";
 
-
-const markdown = `A paragraph with *emphasis* and **strong importance**.
-
-> A block quote with ~strikethrough~ and a URL: https://reactjs.org.
-
-* Lists
-* [ ] todo
-* [x] done
-
-A table:
-
-| a | b |
-| - | - |
-`
 
 export default function aboutme({markdownData}) {
-console.log(markdownData)
     return (
         <>
             <Header/>
             <Layout>
-                <ReactMarkdown
-                    remarkPlugins={[remarkMath]}
-                    rehypePlugins={[rehypeKatex]}
-                    className="prose prose-sm lg:prose-lg px-8 py-8"
+                <div className="flex flex-col items-start md:items-center w-full pt-5 md:justify-center md:gap-10
+                    px-4
+                    h-full">
+                    <ReactMarkdown
+                        remarkPlugins={[remarkMath]}
+                        rehypePlugins={[rehypeKatex]}
+                        className="prose prose-sm lg:prose-lg px-6 py-8 text-justify bg-white rounded-lg border border-gray-200 shadow-md"
 
-                >{markdownData}
-                </ReactMarkdown>
-
+                    >{markdownData}
+                    </ReactMarkdown>
+                    <ContactForm />
+                </div>
             </Layout>
         </>
     )
@@ -44,12 +34,11 @@ console.log(markdownData)
 
 export async function getStaticProps() {
 
-const markdownWithmeta = fs.readFileSync(path.join('markdown/aboutme', 'aboutme.md'), 'utf-8')
-console.log(markdownWithmeta)
+    const markdownWithMeta = fs.readFileSync(path.join('markdown/aboutme', 'aboutme.md'), 'utf-8')
 
     return {
         props: {
-            markdownData: markdownWithmeta
+            markdownData: markdownWithMeta
         }
     }
 }

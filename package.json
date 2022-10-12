@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.0",
-    "@svgr/webpack": "^6.4.0",
+    "@sendgrid/mail": "^7.7.0",
     "framer-motion": "^7.2.1",
     "gray-matter": "^4.0.3",
     "next": "12.2.5",
@@ -22,6 +22,7 @@
     "remark-math": "^5.1.1"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.4.0",
     "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.8",
     "eslint": "8.23.0",

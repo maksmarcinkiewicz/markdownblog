@@ -16,11 +16,6 @@ const Layout = ({children}) => (
             exit="exit"
             variants={variants}
             transition={{type: 'linear'}}
-            className="
-                    flex flex-col items-start md:items-center w-full pt-10
-                    px-4
-                    h-full
-                "
         >
             {children}
         </motion.main>

@@ -8,6 +8,9 @@ import Link from 'next/link'
 import Header from "../../components/Header";
 import 'katex/dist/katex.min.css'
 import Layout from "../../components/Layout";
+import {motion} from "framer-motion";
+import Image from "next/image";
+import BackArrow from "./go-back-arrow-svgrepo-com.svg"
 
 export default function PostPage({
                                      frontmatter: {title, date, cover_image},
@@ -18,22 +21,32 @@ export default function PostPage({
         <>
             <Header/>
 
-                <Layout>
-                    <div className="md:flex flex-col justify-center items-center md:py-10">
-                        {/*<Link href='/blog/'>*/}
-                        {/*    <a className='inline-flex items-start justify-start py-2 px-3 text-sm font-medium text-center text-gray-800 border border-gray-200 border-2 rounded-lg mb-5 font-bold ml-8'>go back</a>*/}
+
+            <Layout>
+
+                    <div className="md:flex md:flex-col md:items-center p-4">
+                        {/*<Link href={`/blog/`}>*/}
+                        {/*    <motion.button*/}
+                        {/*        whileHover={{scale: 1.1}}*/}
+                        {/*        whileTap={{scale: 0.9}}*/}
+                        {/*        className="mx-4 my-5"*/}
+                        {/*    >*/}
+                        {/*        <span className="flex gap-2"> <BackArrow className="w-4"/>go back</span>*/}
+                        {/*    </motion.button>*/}
+
                         {/*</Link>*/}
-                        <div className="md:p-6 md:bg-white md:rounded-lg md:border md:border-gray-200 md:shadow-md">
-                            <h1 className='px-8 text-3xl py-2'>{title}</h1>
-                            <div className='px-8 post-date'>Posted on {date}</div>
+                        <div className="bg-white rounded-lg border border-gray-200 shadow-md pt-5">
+                            <h1 className='px-4 text-3xl py-2'>{title}</h1>
+                            <div className='px-4 post-date'>Posted on {date}</div>
                             <ReactMarkdown
                                 remarkPlugins={[remarkMath]}
                                 rehypePlugins={[rehypeKatex]}
-                                className="prose prose-sm lg:prose-lg px-8 py-8"
+                                className="prose prose-sm lg:prose-lg px-4 py-8"
                             >{content}</ReactMarkdown>
                         </div>
                     </div>
-                </Layout>
+
+            </Layout>
 
 
         </>
