@@ -7,7 +7,7 @@
 
 @layer components {
     .navigation-underline {
-        @apply w-full border border-gray-800;
+        @apply w-full border border-black;
     }
 }
 

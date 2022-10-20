@@ -17,15 +17,15 @@ export default function aboutme({markdownData}) {
             <Layout>
                 <div className="flex flex-col items-start md:items-center w-full pt-5 md:justify-center md:gap-10
                     px-4
-                    h-full">
+                    h-screen">
                     <ReactMarkdown
                         remarkPlugins={[remarkMath]}
                         rehypePlugins={[rehypeKatex]}
-                        className="prose prose-sm lg:prose-lg px-6 py-8 text-justify bg-white rounded-lg border border-gray-200 shadow-md"
+                        className="prose prose-sm lg:prose-lg px-6 py-8 text-justify"
 
                     >{markdownData}
                     </ReactMarkdown>
-                    <ContactForm />
+            
                 </div>
             </Layout>
         </>

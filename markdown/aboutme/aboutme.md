@@ -1,4 +1,4 @@
-## Hi, my name is Norton Bright️
+## Hi, my name is Jakub Szymkowiak
 #### 🎓 I am a graduate student in both Mathematics (Statistics) and Data Analysis & Data Processing at the UCLA
 You're welcome to visit my LinkedIn profile.
 
