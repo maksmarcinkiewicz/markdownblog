@@ -18,7 +18,7 @@ export default function blog({posts}) {
             <Header/>
 
             <Layout>
-                <div className="px-4 h-screen sm:flex sm:items-center">
+                <div className="px-8 py-8 h-screen sm:flex sm:items-center">
                     {/*<h3 className="md:text-4xl md:py-10 text-2xl py-5">{metaData.blog.title}</h3>*/}
                     <div className='flex gap-5 flex-wrap md:justify-center justify-center sm:grid sm:px-12 sm:grid-cols-2 lg:grid-cols-3 lg:px-16 xl:px-32 2xl:px-64'>
                         {posts.map((post, index) => (

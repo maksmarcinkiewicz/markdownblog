@@ -15,11 +15,11 @@ export default function aboutme({markdownData}) {
         <>
             <Header/>
             <Layout>
-                <div className="flex flex-col items-start md:items-center w-full pt-5 md:justify-center md:gap-10 px-4 h-screen">
+                <div className="flex flex-col items-start md:items-center w-full pt-5 md:justify-center md:gap-10 h-screen">
                     <ReactMarkdown
                         remarkPlugins={[remarkMath, remarkGfm]}
                         rehypePlugins={[rehypeKatex]}
-                        className="prose prose-sm lg:prose-lg px-6 py-8 text-justify"
+                        className="prose prose-md px-8 py-8 text-justify"
 
                     >{markdownData}
                     </ReactMarkdown>

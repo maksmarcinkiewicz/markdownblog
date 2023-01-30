@@ -26,14 +26,14 @@ export default function PostPage({
             <Layout>
                     <div className="sm:flex sm:flex-col sm:items-center pt-6">
                  
-                        <div className="">
+                        <div className="px-8">
                         
                             <h1 className='text-3xl py-2 font-bold'>{title}</h1>
                             <div className='post-date'>Posted on {date}</div>
                             <ReactMarkdown
                                 remarkPlugins={[remarkMath]}
                                 rehypePlugins={[rehypeKatex]}
-                                className="prose text-justify"
+                                className="py-8 prose prose-md text-justify"
                             >{content}</ReactMarkdown>
                         </div>
                     </div>
