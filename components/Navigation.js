@@ -10,15 +10,13 @@ const links = [
         name: 'blog',
         href: '/blog',
     },
-    // {
-    //     name: 'technologies',
-    //     href: '/technologies',
-    // },
     {
         name: 'about me',
         href: '/aboutme',
     },
 ]
+
+
 
 export default function Navigation() {
     const router = useRouter()
@@ -27,7 +25,7 @@ export default function Navigation() {
             <nav className="flex">
                 {links.map(({ name, href }) => (
                     <Link key={name} href={href}>
-                        <a className="mr-4 sm:mr-8 flex flex-col sm:text-lg">
+                        <a className={`${name == 'about me' ? 'mr-0' : 'mr-4'} flex flex-col sm:text-lg`}>
                             {name}
                             {isActiveLink(href, router.pathname) && (
                                 <motion.div

@@ -18,7 +18,7 @@ export default function Home({posts}) {
         <>
             <Header/>
             <Layout>
-                <div className="flex flex-col md:flex-row items-center justify-center gap-x-20 px-4 py-8 md:h-screen md:px-8">
+                <div className="flex flex-col md:flex-row items-center justify-center gap-x-20 px-8 py-8 md:h-screen md:px-8">
                     <div className="max-w-sm pb-10">
                         <h5 className="text-2xl font-medium ml-0.5">I am </h5>
                         <h5 className="text-4xl font-medium">{metaData.mainPage.name}</h5>

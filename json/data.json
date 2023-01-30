@@ -1,9 +1,10 @@
 {
     "mainPage": {
-      "name": "Norton Bright",
+      "name": "Jakub Szymkowiak",
       "description": "graduate student in both Mathematics (Statistics) and Data Analysis & Data Processing"
     },
-    "blog": {
-      "title": "my latest posts:"
+    "header": {
+      "name": "Jakub Szymkowiak",
+      "shortName": "JS"
     }
 }
