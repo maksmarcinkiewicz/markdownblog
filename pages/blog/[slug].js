@@ -33,7 +33,7 @@ export default function PostPage({
                             <ReactMarkdown
                                 remarkPlugins={[remarkMath]}
                                 rehypePlugins={[rehypeKatex]}
-                                className="py-8 prose prose-md text-justify"
+                                className="py-8 prose prose-md text-justify mb-10"
                             >{content}</ReactMarkdown>
                         </div>
                     </div>

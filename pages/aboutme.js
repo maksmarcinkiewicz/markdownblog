@@ -15,7 +15,7 @@ export default function aboutme({markdownData}) {
         <>
             <Header/>
             <Layout>
-                <div className="flex flex-col items-start md:items-center w-full pt-5 md:justify-center md:gap-10 h-screen">
+                <div className="flex flex-col items-start md:items-center w-full pt-5 md:justify-center md:gap-10">
                     <ReactMarkdown
                         remarkPlugins={[remarkMath, remarkGfm]}
                         rehypePlugins={[rehypeKatex]}

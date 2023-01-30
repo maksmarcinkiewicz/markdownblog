@@ -9,7 +9,7 @@ module.exports = {
     },
     fontFamily: {
       'sans': ['josefin-sans'],
-      'mono': ['ui-monospace']
+      'mono': ['Roboto Mono', 'SFMono-Regular']
     }
   },
   plugins: [

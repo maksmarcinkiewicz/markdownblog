@@ -18,9 +18,9 @@ export default function blog({posts}) {
             <Header/>
 
             <Layout>
-                <div className="px-8 py-8 h-screen sm:flex sm:items-center">
+                <div className="px-8 py-8 h-screen sm:flex sm:items-center sm:justify-center">
                     {/*<h3 className="md:text-4xl md:py-10 text-2xl py-5">{metaData.blog.title}</h3>*/}
-                    <div className='flex gap-5 flex-wrap md:justify-center justify-center sm:grid sm:px-12 sm:grid-cols-2 lg:grid-cols-3 lg:px-16 xl:px-32 2xl:px-64'>
+                    <div className='flex flex-wrap gap-5 pb-24 sm:grid sm:grid-cols-2'>
                         {posts.map((post, index) => (
                             <Post key={index} post={post}/>
                         ))}
