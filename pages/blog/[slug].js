@@ -11,6 +11,7 @@ import Layout from "../../components/Layout";
 import {motion} from "framer-motion";
 
 
+
 export default function PostPage({
                                      frontmatter: {title, date, cover_image},
                                      slug,
@@ -27,12 +28,12 @@ export default function PostPage({
                  
                         <div className="">
                         
-                            <h1 className='px-8 text-3xl py-2 font-bold'>{title}</h1>
-                            <div className='px-8 post-date'>Posted on {date}</div>
+                            <h1 className='text-3xl py-2 font-bold'>{title}</h1>
+                            <div className='post-date'>Posted on {date}</div>
                             <ReactMarkdown
                                 remarkPlugins={[remarkMath]}
                                 rehypePlugins={[rehypeKatex]}
-                                className="prose prose-sm sm:prose-md lg:prose-lg xl:prose-xl px-8 py-8 text-justify"
+                                className="prose text-justify"
                             >{content}</ReactMarkdown>
                         </div>
                     </div>

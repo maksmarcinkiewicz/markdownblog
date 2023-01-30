@@ -14,7 +14,7 @@ function MyApp({Component, pageProps}) {
                 onExitComplete={() => window.scrollTo(0, 0)}
             >
             <Component {...pageProps} />
-            <Footer />
+            {/* <Footer /> */}
             </AnimatePresence>
 
         </>

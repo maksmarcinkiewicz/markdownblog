@@ -44,4 +44,12 @@
     100% { transform: rotate( 0.0deg) }
 }
 
+.prose :where(code):not(:where([class~="not-prose"] *))::before {
+    content: "";
+}
+
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
+    content: "";
+}
+
 
